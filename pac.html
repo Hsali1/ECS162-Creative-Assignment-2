@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arcade Website</title>
+    <link rel="stylesheet" href="styles/basic-page.css">
+    <link rel="stylesheet" href="styles/pac.css">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <script src="scripts/pac.js"></script>
+</head>
+
+<body>
+    <header>
+        <a id="top"></a>
+        <section id="top-container">
+            <a href="landing.html">
+                <img id="arcade-img-header" src="images/image-from-rawpixel-id-6755599-png.png"
+                    alt="Image of an arcade machine" title="arcade-image">
+            </a>
+            <h1>Minny Klipz.</h1>
+            <audio id="backgroundMusic" src="audio/epic-music.mp3" autoplay loop></audio>
+        </section>
+    </header>
+    <main>
+        <section id="game">
+            <h2>Escape from Bubba.</h2>
+            <div id="Commands">
+                <p> A, &#60;- =left </p>
+                <p>D, -&#62; = right</p>
+                <p>Click toggles left and right</p>
+                <p>Click restart button or Press R</p>
+                <p>Toggle music on or off with M</p>
+            </div>
+            <div id="score"></div>
+            <button id="restartButton" class="hidden">Restart</button>
+            <canvas id="board"></canvas>
+        </section>
+    </main>
+    <footer>
+        <section id="contact-info">
+            <h3>Links.</h3>
+            <div>
+                <div class="contact-link">
+                    <a href="https://www.linkedin.com/in/2hassan/" target="_blank">
+                        <p>LinkedIn</p>
+                    </a>
+                </div>
+                <div class="contact-link">
+                    <a href="https://github.com/Hsali1" target="_blank">
+                        <p>GitHub</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

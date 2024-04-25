@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+}
+
+main {
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    background-color: #333;
+    color: white;
+}
+
+#game img {
+    margin: 0;
+    padding: 0;
+    width: 10%;
+    height: 10%;
+}
+
+#restartButton {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    position: fixed;
+}
+
+#commands {
+    left: 0;
+}
