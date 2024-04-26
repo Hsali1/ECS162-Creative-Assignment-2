@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Arcade Website</title>
+    <title>Break Out</title>
     <link rel="stylesheet" href="styles/basic-page.css">
-    <link rel="stylesheet" href="styles/landing.css">
+    <link rel="stylesheet" href="styles/break.css">
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
 </head>
 
@@ -22,32 +22,20 @@
         </section>
     </header>
     <main>
-        <section id="games">
-            <h2>Games.</h2>
-            <div class="container">
-                <div class="card">
-                    <a href="pac.html">
-                        <img src="images/game1.png" alt="Image 1">
-                        <div class="overlay">
-                            <p>
-                                Bubba is coming to break my ankles because I ate his cheetos. Pls help me
-                                survive.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="break.html">
-                        <img src="images/game1.png" alt="Image 2">
-                        <div class="overlay">Text Overlay 2</div>
-                    </a>
-                </div>
-                <div class="card">
-                    <!-- Add image3.jpg here with the appropriate path -->
-                    <img src="images/game1.png" alt="Image 3">
-                    <div class="overlay">Text Overlay 3</div>
-                </div>
+        <section id="game">
+            <h2>Destroy Bubba</h2>
+            <button id="rules-btn" class="btn rules-btn">Show Rules</button>
+            <div id="rules" class="rules">
+                <h2>Rules</h2>
+                <p>
+                    Use right and left arrow keys to move floor and bounce the ball.
+                </p>
+                <p>
+                    Missing the floor resets the game.
+                </p>
+                <button id="close-btn" class="btn">Close</button>
             </div>
+            <canvas id="canvas" width="800" height="600"></canvas>
         </section>
     </main>
     <footer>
@@ -67,6 +55,7 @@
             </div>
         </section>
     </footer>
+    <script src="scripts/dice.js"></script>
 </body>
 
 </html>

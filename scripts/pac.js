@@ -10,17 +10,22 @@ let restartButton;
 let musicOn = false;
 
 // mee
-let meWidth = 46;
-let meHeight = 46;
+let meWidth = 100;
+let meHeight = 100;
 let meX = gameWidth / 2 - gameWidth / 2;
 let meY = gameHeight / 1.9 - meHeight;
 let meImage;
 
+if (gameWidth <= 450) {
+    meWidth = 20;
+    meHeight = 20;
+}
+
 // enemmy
-let enemyWidth = 46;
-let enemyHeight = 46;
+let enemyWidth = meWidth;
+let enemyHeight = meHeight;
 let enemyX = gameWidth - (gameWidth / 4);
-let enemyY = gameHeight / 1.9 - meHeight;
+let enemyY = meY
 let enemyImage;
 let enemySpeed = 5;
 
@@ -182,20 +187,5 @@ function restartGame() {
 
 
 function adjustGameSize() {
-    gameWidth = window.innerWidth;
-    gameHeight = window.innerHeight / 2;
-
-    // Adjust canvas size
-    game.height = gameHeight;
-    game.width = gameWidth;
-
-    me.x = gameWidth / 2 - gameWidth / 2;
-    me.y = gameHeight / 1.9 - meHeight;
-    enemy.x = gameWidth - (gameWidth / 4);
-    enemy.y = gameHeight / 1.9 - meHeight;
-
-    // Redraw images
-    context.clearRect(0, 0, game.width, gameHeight);
-    context.drawImage(me.img, me.x, me.y, me.width, me.height);
-    context.drawImage(enemy.img, enemy.x, enemy.y, enemy.width, enemy.height);
+    window.location.reload();
 }
