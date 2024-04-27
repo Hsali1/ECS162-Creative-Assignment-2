@@ -10,22 +10,17 @@ let restartButton;
 let musicOn = false;
 
 // mee
-let meWidth = 100;
-let meHeight = 100;
+let meWidth = 46;
+let meHeight = 46;
 let meX = gameWidth / 2 - gameWidth / 2;
 let meY = gameHeight / 1.9 - meHeight;
 let meImage;
 
-if (gameWidth <= 450) {
-    meWidth = 20;
-    meHeight = 20;
-}
-
 // enemmy
-let enemyWidth = meWidth;
-let enemyHeight = meHeight;
+let enemyWidth = 46;
+let enemyHeight = 46;
 let enemyX = gameWidth - (gameWidth / 4);
-let enemyY = meY
+let enemyY = gameHeight / 1.9 - meHeight;
 let enemyImage;
 let enemySpeed = 5;
 
@@ -80,7 +75,10 @@ window.onload = function () {
 
     // music
     const backgroundMusic = document.getElementById("backgroundMusic");
-
+    // buttons
+    const rulesBtn = document.getElementById('rules-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const rules = document.getElementById('rules');
 
     // load images
     meImage = new Image();
@@ -104,6 +102,8 @@ window.onload = function () {
     document.addEventListener("click", moveMe);
     restartButton.addEventListener("click", restartGame);
     window.addEventListener("resize", adjustGameSize);
+    rulesBtn.addEventListener('click', showRules);
+    closeBtn.addEventListener('click', closeRules);
 }
 
 function update() {
@@ -126,6 +126,9 @@ function update() {
         } else if (enemy.x > me.x) {
             enemy.x -= enemySpeed;
         }
+
+        context.fillStyle = "lightblue";
+        context.fillRect(0, 0, gameWidth, gameHeight);
 
         context.drawImage(me.img, me.x, me.y, me.width, me.height);
         context.drawImage(enemy.img, enemy.x, enemy.y, enemy.width, enemy.height);
@@ -150,9 +153,9 @@ function update() {
 function moveMe(e) {
     if (e.type === "keydown") {
         if (e.code == "ArrowRight" || e.code == "KeyD") {
-            speedX = 4;
+            speedX = 5;
         } else if (e.code == "ArrowLeft" || e.code == "KeyA") {
-            speedX = -4;
+            speedX = -5;
         } else if (e.code == "KeyR") {
             restartGame();
         } else if (e.code == "KeyM") {
@@ -188,4 +191,12 @@ function restartGame() {
 
 function adjustGameSize() {
     window.location.reload();
+}
+
+function showRules() {
+    rules.classList.add('show');
+}
+
+function closeRules() {
+    rules.classList.remove('show');
 }

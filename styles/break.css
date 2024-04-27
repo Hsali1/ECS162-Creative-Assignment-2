@@ -1,8 +1,66 @@
-body {
+* {
+    box-sizing: border-box;
     text-align: center;
 }
 
 h2 {
     background-color: #333;
     color: white;
+}
+
+#game {
+    position: relative;
+}
+
+body canvas {
+    background-color: lightblue;
+    width: 75%;
+    height: 50vh;
+    margin: 0;
+    margin-top: 40px;
+    padding: 0;
+}
+
+.btn {
+    cursor: pointer;
+    border: 0;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn:hover {
+    background-color: blue;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.rules-btn {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
+.rules {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #333;
+    color: white;
+    width: 400px;
+    padding: 20px;
+    line-height: 1.5;
+    transform: translateX(-400px);
+    transition: transform 1s ease-in-out;
+}
+
+.rules.show {
+    transform: translateX(0);
 }
