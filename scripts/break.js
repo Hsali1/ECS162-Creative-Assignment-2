@@ -163,9 +163,15 @@ function moveBall() {
     ball.x += ball.speedx;
     ball.y += ball.speedy;
 
-    // wall detect collision
-    if (ball.x - ball.radius <= 0 || ball.x + ball.radius >= canvas.width) {
-        ball.speedx *= -1;
+    // Check collision with left and right walls
+    if (ball.x - ball.radius <= 0) {
+        // Ball hits the left wall
+        ball.x = ball.radius; // Adjust the position to prevent sticking
+        ball.speedx *= -1; // Reverse the horizontal direction
+    } else if (ball.x + ball.radius >= canvas.width) {
+        // Ball hits the right wall
+        ball.x = canvas.width - ball.radius; // Adjust the position to prevent sticking
+        ball.speedx *= -1; // Reverse the horizontal direction
     }
 
     // ceiling detect collision
