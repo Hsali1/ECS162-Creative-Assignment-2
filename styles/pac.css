@@ -60,6 +60,12 @@ h2 {
     left: 0;
 }
 
+.music-btn {
+    position: absolute;
+    top: 85%;
+    left: 0;
+}
+
 .rules {
     position: absolute;
     top: 70%;

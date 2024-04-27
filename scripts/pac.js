@@ -80,6 +80,8 @@ window.onload = function () {
     const rulesBtn = document.getElementById('rules-btn');
     const closeBtn = document.getElementById('close-btn');
     const rules = document.getElementById('rules');
+    const musicBtn = document.getElementById('music-btn');
+
 
     // load images
     meImage = new Image();
@@ -105,6 +107,7 @@ window.onload = function () {
     window.addEventListener("resize", adjustGameSize);
     rulesBtn.addEventListener('click', showRules);
     closeBtn.addEventListener('click', closeRules);
+    musicBtn.addEventListener('click', musicFunc);
 }
 
 function update() {
@@ -200,4 +203,15 @@ function showRules() {
 
 function closeRules() {
     rules.classList.remove('show');
+}
+
+function musicFunc() {
+    backgroundMusic.volume = 0.005;
+    if (musicOn == true) {
+        backgroundMusic.pause();
+        musicOn = false;
+    } else {
+        backgroundMusic.play();
+        musicOn = true;
+    }
 }
