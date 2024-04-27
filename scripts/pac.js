@@ -75,6 +75,7 @@ window.onload = function () {
 
     // music
     const backgroundMusic = document.getElementById("backgroundMusic");
+    backgroundMusic.pause();
     // buttons
     const rulesBtn = document.getElementById('rules-btn');
     const closeBtn = document.getElementById('close-btn');
