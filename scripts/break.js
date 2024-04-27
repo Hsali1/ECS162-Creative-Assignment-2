@@ -144,6 +144,7 @@ function touchStart(event) {
 }
 
 function touchMove(event) {
+    event.preventDefault();
     floor.x = event.touches[0].clientX - floor.width / 2;
     if (floor.x + floor.width > canvas.width) {
         floor.x = canvas.width - floor.width;
