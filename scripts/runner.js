@@ -147,6 +147,7 @@ let touchStartX = null;
 let touchEndX = null;
 
 function touchStart(event) {
+    event.preventDefault();
     if (gameOver) {
         window.location.reload();
     }
@@ -154,6 +155,7 @@ function touchStart(event) {
 }
 
 function touchEnd(event) {
+    event.preventDefault();
     touchEndX = event.changedTouches[0].clientX;
     handleTouch();
 }
