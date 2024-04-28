@@ -8,11 +8,12 @@ h2 {
     color: white;
 }
 
+
 #game {
     position: relative;
 }
 
-body canvas {
+#canvas {
     background-color: lightblue;
     width: 100%;
     height: 50vh;
@@ -20,6 +21,7 @@ body canvas {
     margin-top: 40px;
     padding: 0;
 }
+
 
 .btn {
     cursor: pointer;
@@ -63,25 +65,4 @@ body canvas {
 
 .rules.show {
     transform: translateX(0);
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    padding: 3%;
-}
-
-footer a {
-    text-decoration: none;
-    color: #333;
-    background-color: white;
-    padding: 1%;
-    border-radius: 10%;
 }

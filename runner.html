@@ -4,12 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Break Out</title>
+    <title>Run From Bubba</title>
     <link rel="stylesheet" href="styles/basic-page.css">
-    <link rel="stylesheet" href="styles/break.css">
+    <link rel="stylesheet" href="styles/runner.css">
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/image-from-rawpixel-id-6755599-png.png">
-
 </head>
 
 <body>
@@ -21,30 +20,24 @@
                     alt="Image of an arcade machine" title="arcade-image">
             </a>
             <h1>Minny Klipz.</h1>
+            <audio id="backgroundMusic" src="audio/epic-music.mp3" autoplay loop></audio>
         </section>
     </header>
     <main>
         <section id="game">
-            <h2>Destroy Bubba</h2>
+            <h2>Jump!</h2>
             <button id="rules-btn" class="btn rules-btn">Show Rules</button>
             <div id="rules" class="rules">
                 <h2>Rules</h2>
                 <p>
-                    Use right and left arrow keys to move floor and bounce the ball.
-                </p>
-                <p>
-                    Missing the floor resets the game.
+                    Move with Arrow Right or Arrow Left. Try to survive.
                 </p>
                 <button id="close-btn" class="btn">Close</button>
             </div>
             <canvas id="canvas"></canvas>
         </section>
     </main>
-    <footer>
-        <p>Original Project By bradtraversy <a
-                href="https://github.com/bradtraversy/vanillawebprojects/tree/master/breakout-game"> Link</a></p>
-    </footer>
-    <script src="scripts/break.js"></script>
+    <script src="scripts/runner.js"></script>
 </body>
 
 </html>
