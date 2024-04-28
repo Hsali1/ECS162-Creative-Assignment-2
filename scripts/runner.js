@@ -125,9 +125,12 @@ function update() {
     context.fillStyle = 'black';
     context.font = "20px Arial";
     context.fillText(score, 10, 20);
-
+    let randomNum = canvas.width / 3;
+    if (window.innerWidth <= 500) {
+        randomNum = canvas.width / 20;
+    }
     if (gameOver) {
-        context.fillText("GAME OVER: Press Space or click to restart", canvas.width / 3, canvas.height / 2);
+        context.fillText("GAME OVER: Press Space or click to restart", randomNum, canvas.height / 2);
 
     }
 }
@@ -239,6 +242,5 @@ function collision(a, b) {
 
 
 function adjustGameSize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    window.location.reload();
 }
