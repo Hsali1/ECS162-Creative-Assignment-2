@@ -239,5 +239,6 @@ function collision(a, b) {
 
 
 function adjustGameSize() {
-    window.location.reload();
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 }
