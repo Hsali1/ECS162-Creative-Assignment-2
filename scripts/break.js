@@ -259,7 +259,7 @@ function showAllEnemies() {
     });
 }
 
-
+// Make all enemies come down as time passes
 function updateEnemyPositions() {
     const currentTime = Date.now();
     const elapsedTime = currentTime - lastDropTime;

@@ -1,0 +1,50 @@
+Documentation:
+
+Audience:
+- Main audience is my friends.
+- Secondary audience is people who like to set scores in unfair games.
+------------------------------------
+
+Assets:
+Arcade Image free for commercial use: https://www.rawpixel.com/image/6755599/png-sticker-public-domain
+Audio: I own the audio in game 1. I have attached the license in the audio folder
+I own all other images/assets besides the 2 mentioned above.
+
+------------------------------------
+Game 1 - Original - Chase game
+
+Goal is to survive the longest and not get caught.
+Enemy speed increases by 0.1 every 100 points.
+
+Features:
+Accepts keyboard inputs: A, D and arrow keys. Also accepts mouse clicks and touch
+Restart button restarts the game.
+I added music that I have commercial licence for.
+The game adjusts itself according to the screen size.
+
+
+Challenges:
+More features such as powerups were getting very challenging.
+
+
+------------------------------------
+Game 2 - Open Source - Breakout Game
+
+He used shapes to draw elements, I used pictures.
+If enemies touch the floor game restarts or the ball.
+I made the game playable on phones where you can touch and hold the floor.
+I made sure the game adjusted on every single screen as his only had fixed dimensions
+I added difficulty where the enemies keep coming closer to the the floor and if they touch the floor it's game over. but I also added infinite replayabliity where the game keeps going on forever with increase ball size and enemy speed.
+
+Challenges:
+Keeping track of all the enemies and moving ball. The x and y positions for collision was very challenging to get down.
+
+
+------------------------------------
+Game 3 - Original - Jump game
+
+The idea behind this game is that it is unfair. Platforms appear randomly every second. player needs to land on them.
+
+The game adjusts itself according to the screen size.
+This game uses mostly the same code as Game 1 with the addition of platforms and jumps.
+

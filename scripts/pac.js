@@ -28,7 +28,7 @@ let enemySpeed = 5;
 let speedX = 0;
 let moveDirection = 1;
 
-
+// character objects
 let me = {
     img: null,
     x: meX,
@@ -45,6 +45,7 @@ let enemy = {
     height: enemyHeight
 }
 
+// score functionality
 function updateTimer() {
     score = ++elapsedTime;
 
@@ -101,6 +102,8 @@ window.onload = function () {
     restartButton = document.getElementById("restartButton");
 
     requestAnimationFrame(update);
+
+    // Event Handlers
     document.addEventListener("keydown", moveMe);
     document.addEventListener("click", moveMe);
     restartButton.addEventListener("click", restartGame);

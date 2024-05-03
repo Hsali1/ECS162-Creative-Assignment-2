@@ -17,6 +17,15 @@ let directionY = 0;
 let initialDirectionY = -8;
 let gravity = 0.3;
 
+let runner = {
+    img: null,
+    x: runnerX,
+    y: runnerY,
+    width: runnerWidth,
+    height: runnerHeight
+}
+
+
 let score = 0;
 let gameOver = false;
 
@@ -28,15 +37,6 @@ if (window.innerWidth < 500) {
 }
 let platformHeight = 18;
 const minDistanceBetweenPlatforms = 100;
-
-
-let runner = {
-    img: null,
-    x: runnerX,
-    y: runnerY,
-    width: runnerWidth,
-    height: runnerHeight
-}
 
 let ground = {
     x: 0,
@@ -66,9 +66,12 @@ window.onload = () => {
     context.fillStyle = 'green';
     context.fillRect(0, ground.y, ground.width, ground.height);
 
+
     directionY = initialDirectionY;
 
+    // Place initial platforms
     placePlatforms();
+
     requestAnimationFrame(update);
     document.addEventListener('keydown', moveRunner);
     rulesBtn.addEventListener('click', () => rules.classList.add('show'));
@@ -122,9 +125,12 @@ function update() {
         context.fillRect(platform.x, platform.y, platform.width, platform.height);
     }
 
+    // print/update score on screen
     context.fillStyle = 'black';
     context.font = "20px Arial";
     context.fillText(score, 10, 20);
+
+    // check if game over to print gameover message
     let randomNum = canvas.width / 3;
     if (window.innerWidth <= 500) {
         randomNum = canvas.width / 20;
@@ -135,6 +141,7 @@ function update() {
     }
 }
 
+// take intput and move runner
 function moveRunner(e) {
     if (e.code == 'ArrowRight' || e.code == 'KeyD') {
         directionX = 4;
@@ -149,6 +156,7 @@ function moveRunner(e) {
 let touchStartX = null;
 let touchEndX = null;
 
+// touch functionality
 function touchStart(event) {
     event.preventDefault();
     if (gameOver) {

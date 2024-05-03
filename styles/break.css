@@ -48,40 +48,23 @@ body canvas {
     left: 20px;
 }
 
+.close-btn {
+    background-color: white;
+    color: #333;
+}
+
 .rules {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: fixed;
     background: #333;
     color: white;
-    width: 400px;
+    width: 100%;
+    height: 60%;
     padding: 20px;
     line-height: 1.5;
-    transform: translateX(-400px);
-    transition: transform 1s ease-in-out;
+    transform: translateX(-100%);
+    transition: transform;
 }
 
 .rules.show {
     transform: translateX(0);
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    padding: 3%;
-}
-
-footer a {
-    text-decoration: none;
-    color: #333;
-    background-color: white;
-    padding: 1%;
-    border-radius: 10%;
 }
